@@ -1,25 +1,21 @@
-import {
-  ArrowLeft,
-  ArrowRight,
-  ArrowRightAlt,
-  StarOutlineRounded
-} from "@material-ui/icons";
-import { useLinkClickHandler } from "react-router-dom";
+import { ArrowLeft, ArrowRight, ArrowRightAlt } from "@material-ui/icons";
 import styled from "styled-components";
-import HomePageGirl from "../Images/home-page-girl.jpg";
+import React from "react";
+import { sliderItems } from "./data";
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  /* background-color: coral; */
   position: relative;
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  overflow: hidden;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
+  transition: all 1.5s ease;
 `;
 
 const Slide = styled.div`
@@ -40,7 +36,7 @@ const Image = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
+  flex: 2;
   padding: 50px;
 `;
 
@@ -81,51 +77,39 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "10px"};
   opacity: 0.7;
   cursor: pointer;
+  z-index: 2;
 `;
 
 export default function Slider() {
+  const [slideIndex, setSlideIndex] = React.useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else if (direction === "right") {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    } else {
+      console.log("error");
+    }
+  };
+
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeft />
       </Arrow>
-      <Wrapper>
-        <Slide bg="fcf1ed">
-          <ImageContainer>
-            <Image src={HomePageGirl} />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>SUMMER SALE!</Title>
-            <Description>
-              TOP-TRENDING PICKS {<StarOutlineRounded />} WEAR YOUR FASHION
-            </Description>
-            <Button>CHECK IT OUT {<ArrowRightAlt />}</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="f5fafd">
-          <ImageContainer>
-            <Image src={HomePageGirl} />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>POPULAR SALE!</Title>
-            <Description>
-              TOP-TRENDING PICKS {<StarOutlineRounded />} WEAR YOUR FASHION
-            </Description>
-            <Button>CHECK IT OUT {<ArrowRightAlt />}</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fbf0f4">
-          <ImageContainer>
-            <Image src={HomePageGirl} />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>50% OFF</Title>
-            <Description>
-              TOP-TRENDING PICKS {<StarOutlineRounded />} WEAR YOUR FASHION
-            </Description>
-            <Button>CHECK IT OUT {<ArrowRightAlt />}</Button>
-          </InfoContainer>
-        </Slide>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg}>
+            <ImageContainer>
+              <Image src={item.img} />
+            </ImageContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Description>{item.desc}</Description>
+              <Button>CHECK IT OUT {<ArrowRightAlt />}</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRight />
@@ -133,4 +117,3 @@ export default function Slider() {
     </Container>
   );
 }
-
