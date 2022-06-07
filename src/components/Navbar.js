@@ -2,14 +2,13 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
 import styled from "styled-components";
 
-const Container = styled.div`
-  height: 4em;
-`;
+const Container = styled.div``;
 
 const Wrapper = styled.div`
-  padding: 10px 20px;
+  padding: 1.4em 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const Left = styled.div`
@@ -35,6 +34,10 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const SearchStyle = {
@@ -71,7 +74,7 @@ export default function Navbar() {
         <Left>
           <Languages>EN</Languages>
           <SearchContainer>
-            <Input />
+            <Input placeholder="search" />
             <Search style={SearchStyle} />
           </SearchContainer>
         </Left>
@@ -91,4 +94,3 @@ export default function Navbar() {
     </Container>
   );
 }
-
