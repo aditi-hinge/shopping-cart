@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight, ArrowRightAlt } from "@material-ui/icons";
 import styled from "styled-components";
 import React from "react";
 import { sliderItems } from "./data";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -9,6 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  ${mobile({ display: "none" })}
 `;
 
 const Wrapper = styled.div`
@@ -99,7 +101,7 @@ export default function Slider() {
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
-          <Slide bg={item.bg}>
+          <Slide bg={item.bg} key={item.id}>
             <ImageContainer>
               <Image src={item.img} />
             </ImageContainer>
