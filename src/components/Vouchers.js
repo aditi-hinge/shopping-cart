@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -6,25 +7,31 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2em;
-  background-color: #E5E4E2;
+  background-color: #e5e4e2;
   margin-bottom: 20px;
 `;
+
 const Title = styled.h4`
+  text-align: center;
 `;
 
 const Buttons = styled.div`
-  /* display: flex; */
-
+  width: 8em;
+  display: flex;
+  justify-content: space-between;
 `;
+
 const Button = styled.button`
-  margin-right: 1em;
+  margin-top: 1em;
   padding: 0.3em 0.4em;
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  color: #2B547E;
+  color: #2b547e;
 
-  &:hover{
+  ${mobile({ display: "flex" })}
+
+  &:hover {
     text-decoration: underline;
   }
 `;
