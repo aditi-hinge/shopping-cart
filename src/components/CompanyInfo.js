@@ -7,6 +7,8 @@ import {
   YouTube
 } from "@material-ui/icons";
 
+import { mobile } from "../responsive";
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,6 +27,8 @@ const Desc = styled.p`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${mobile({ textAlign: "center", marginBottom: "1em" })}
 `;
 
 const CountryInfo = styled.div`
@@ -32,6 +36,8 @@ const CountryInfo = styled.div`
   font-size: 1rem;
   font-weight: 400;
   margin: 3em 0px;
+
+  ${mobile({ margin: "1em 0", fontSize: "0.8rem" })}
 `;
 
 const Country = styled.span`
@@ -45,6 +51,12 @@ const Country = styled.span`
 
 const Socials = styled.div`
   display: flex;
+
+  ${mobile({
+    width: "100%",
+    justifyContent: "space-around",
+    marginTop: "1em"
+  })}
 `;
 
 const Icon = styled.div`
@@ -63,6 +75,8 @@ const Icon = styled.div`
   &:hover {
     filter: brightness(130%);
   }
+
+  ${mobile({ margin: "0" })}
 `;
 
 export default function CompanyInfo() {
@@ -101,7 +115,7 @@ export default function CompanyInfo() {
       </Desc>
       <Logo>LAMA.</Logo>
       <CountryInfo>
-        <Country>JAPAN</Country> | Yen
+        <Country>JAPAN</Country> | ¥
       </CountryInfo>
     </Container>
   );
