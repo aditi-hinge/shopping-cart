@@ -13,7 +13,6 @@ const Container = styled.div`
 
 export default function Announcements() {
   return (
-    <Container>Super Deal! Free Shipping for Orders over ￥5000!</Container>
+    <Container>Super Deal! Free Shipping for Orders over ￥9000!</Container>
   );
 }
-

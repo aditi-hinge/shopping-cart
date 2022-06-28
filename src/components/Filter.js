@@ -1,21 +1,38 @@
 import styled from "styled-components";
 import "../styles.css";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 2em;
+
+  ${mobile({
+    margin: "0",
+    padding: "0.2em"
+  })}
 `;
 
 const Left = styled.div`
   display: flex;
+
+  ${mobile({
+    width: "100%",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    backgroundColor: "#FBFBF9"
+  })}
 `;
 
 const Right = styled.div`
   display: flex;
   font-size: 1rem;
   font-weight: 400;
+
+  ${mobile({
+    display: "none"
+  })}
 `;
 
 const Category = styled.div`
@@ -23,12 +40,24 @@ const Category = styled.div`
   position: relative;
   display: inline-block;
   cursor: ${(props) => props.type === "right" && "pointer"};
+
+  ${mobile({
+    display: "grid",
+    margin: "0"
+  })}
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
   cursor: pointer;
+
+  ${mobile({
+    padding: "5px",
+    display: "grid",
+    margin: "0.4em",
+    border: "1px solid gray"
+  })}
 `;
 
 const Option = styled.option``;

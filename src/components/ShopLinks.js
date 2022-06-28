@@ -69,14 +69,14 @@ export default function ShopLinks() {
           <ListItem>Men</ListItem>
           <ListItem>Baby</ListItem>
           <ListItem>Kids</ListItem>
-          <ListItem>LAMA. HOME</ListItem>
+          <ListItem>AUDERY. HOME</ListItem>
         </List>
       </Section>
       <Section>
         <Title>CORPORATE INFO</Title>
         <List>
-          <ListItem>Career at LAMA.</ListItem>
-          <ListItem>About LAMA. group</ListItem>
+          <ListItem>Career at AUDERY.</ListItem>
+          <ListItem>About AUDERY. group</ListItem>
           <ListItem>Sustainability</ListItem>
           <ListItem>Press</ListItem>
           <ListItem>Investor relations</ListItem>
@@ -86,7 +86,7 @@ export default function ShopLinks() {
         <Title>HELP</Title>
         <List>
           <ListItem>Customer Service</ListItem>
-          <ListItem>My LAMA.</ListItem>
+          <ListItem>My AUDERY.</ListItem>
           <ListItem>Find a store</ListItem>
           <ListItem>Legal & Privacy</ListItem>
           <ListItem>Contact</ListItem>

@@ -102,18 +102,18 @@ export default function CompanyInfo() {
       <Desc>
         <p>
           The content of this site is copyright-protected and is the property of
-          LAMA.
+          AUDERY.
         </p>
         <p>
-          LAMA’s business concept is to offer fashion and quality at the best
+          AUDERY’s business concept is to offer fashion and quality at the best
           price in a sustainable way.
         </p>
         <p>
-          LAMA has since it was founded in 1947 grown into one of the world's
+          AUDERY has since it was founded in 1947 grown into one of the world's
           leading fashion companies.
         </p>
       </Desc>
-      <Logo>LAMA.</Logo>
+      <Logo>AUDERY.</Logo>
       <CountryInfo>
         <Country>JAPAN</Country> | ¥
       </CountryInfo>
