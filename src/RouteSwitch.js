@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import ProductList from "./pages/ProductList";
 import SingleProduct from "./pages/SingleProduct";
@@ -15,7 +15,7 @@ import { connect } from "react-redux";
 
 function RouteSwitch({ current }) {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path={process.env.PUBLIC_URL + '/'} element={<App />} />
         <Route path="/productlist" element={<ProductList />} />
@@ -27,7 +27,7 @@ function RouteSwitch({ current }) {
         <Route path="/cart" element={<Cart />} />
         <Route path="/thankyou" element={<Thankyou />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
