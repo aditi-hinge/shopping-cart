@@ -15,9 +15,9 @@ import { connect } from "react-redux";
 
 function RouteSwitch({ current }) {
   return (
-    <HashRouter basename="/shopping-cart">
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="shopping-cart/" element={<App />} />
         <Route path="/productlist" element={<ProductList />} />
         {current && (
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
