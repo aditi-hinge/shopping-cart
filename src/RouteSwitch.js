@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import ProductList from "./pages/ProductList";
 import SingleProduct from "./pages/SingleProduct";
@@ -10,11 +10,12 @@ import React from "react";
 
 import { connect } from "react-redux";
 
-import history from "./helpers/history";
+// import history from "./helpers/history";
+// import { useRouterHistory } from "react-router"
 
 function RouteSwitch({ current }) {
   return (
-    <BrowserRouter history={history} basename="/shopping-cart">
+    <HashRouter basename="/shopping-cart">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/productlist" element={<ProductList />} />
@@ -26,7 +27,7 @@ function RouteSwitch({ current }) {
         <Route path="/cart" element={<Cart />} />
         <Route path="/thankyou" element={<Thankyou />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
