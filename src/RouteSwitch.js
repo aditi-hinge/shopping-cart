@@ -10,9 +10,11 @@ import React from "react";
 
 import { connect } from "react-redux";
 
+import history from "./helpers/history"
+
 function RouteSwitch({ current }) {
   return (
-    <BrowserRouter basename="/shopping-cart">
+    <BrowserRouter history={history} basename="/shopping-cart">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/productlist" element={<ProductList />} />
