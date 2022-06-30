@@ -12,7 +12,7 @@ import { connect } from "react-redux";
 
 function RouteSwitch({ current }) {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shopping-cart">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/productlist" element={<ProductList />} />
