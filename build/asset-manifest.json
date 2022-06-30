@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.42a6cb85.css",
+    "main.js": "/shopping-cart/static/js/main.a07e7c14.js",
+    "static/media/asian-model.jpg": "/shopping-cart/static/media/asian-model.d2f779ac01cf64080d1e.jpg",
+    "static/media/shirt-model.jpg": "/shopping-cart/static/media/shirt-model.e1c9e523f20ff87bbdce.jpg",
+    "static/media/home-page-girl.jpg": "/shopping-cart/static/media/home-page-girl.048db41eb006761bcf73.jpg",
+    "static/media/yellow-long-dress.jpg": "/shopping-cart/static/media/yellow-long-dress.979c5339805a9a1d8f8f.jpg",
+    "static/media/brown-model.jpg": "/shopping-cart/static/media/brown-model.2304f9732879204e2093.jpg",
+    "static/media/formal-wear.jpg": "/shopping-cart/static/media/formal-wear.c7f81e7aba0ae3f637a3.jpg",
+    "static/media/full-coat.jpg": "/shopping-cart/static/media/full-coat.496b12e1c64f8c20420d.jpg",
+    "static/media/login-bg.jpg": "/shopping-cart/static/media/login-bg.2c243d58b5f415f5cb74.jpg",
+    "static/media/flower-dress.jpg": "/shopping-cart/static/media/flower-dress.65580ca151162548833d.jpg",
+    "static/media/blue-top.jpg": "/shopping-cart/static/media/blue-top.fb4a9749120659996a72.jpg",
+    "static/media/flower-tote-bag.jpg": "/shopping-cart/static/media/flower-tote-bag.bec5762d7661c6b07799.jpg",
+    "static/media/cute-cat.jpg": "/shopping-cart/static/media/cute-cat.752d0fcdf3a58746d08a.jpg",
+    "static/media/sandals.png": "/shopping-cart/static/media/sandals.195c8b3319fafc454da8.png",
+    "static/media/register-page-bg.jpg": "/shopping-cart/static/media/register-page-bg.8e9b01686391a08a129c.jpg",
+    "static/media/sweater.jpg": "/shopping-cart/static/media/sweater.abca78030dfa290e9470.jpg",
+    "static/media/tsuki-top.jpg": "/shopping-cart/static/media/tsuki-top.74650fa113c44ea8d612.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.42a6cb85.css.map": "/shopping-cart/static/css/main.42a6cb85.css.map",
+    "main.a07e7c14.js.map": "/shopping-cart/static/js/main.a07e7c14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42a6cb85.css",
+    "static/js/main.a07e7c14.js"
+  ]
+}
