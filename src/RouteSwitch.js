@@ -15,7 +15,7 @@ import { connect } from "react-redux";
 
 function RouteSwitch({ current }) {
   return (
-    <HashRouter basename="/shopping-cart">
+    <HashRouter>
       <Routes>
         <Route path={process.env.PUBLIC_URL + '/'} element={<App />} />
         <Route path="/productlist" element={<ProductList />} />
