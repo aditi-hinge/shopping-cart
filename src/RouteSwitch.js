@@ -17,7 +17,7 @@ function RouteSwitch({ current }) {
   return (
     <HashRouter basename="/shopping-cart">
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path={process.env.PUBLIC_URL + '/'} element={<App />} />
         <Route path="/productlist" element={<ProductList />} />
         {current && (
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
