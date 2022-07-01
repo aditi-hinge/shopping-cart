@@ -38,7 +38,7 @@ export default function Register() {
             By creating an account, I consent to the processing of my personal
             data in accordance with the Privacy Policy
           </Agreement>
-          <Link className="text-link" to="/">
+          <Link className="text-link" to={process.env.PUBLIC_URL + '/'}>
             <Button type="button" onClick={thankYou}>
               CREATE ACCOUNT
             </Button>
@@ -47,7 +47,7 @@ export default function Register() {
             <b>Read Agreement Policy</b>
           </MobileAgreement>
         </Form>
-        <Link className="text-link" to="/shopping-cart">
+        <Link className="text-link" to={process.env.PUBLIC_URL + '/'}>
           <CloseContainer>
             <Close />
           </CloseContainer>
