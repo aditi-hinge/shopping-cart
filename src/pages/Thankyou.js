@@ -17,7 +17,7 @@ export default function Thankyou() {
             <h2>Thank you for shopping with us.</h2>
             <h3 className="heading">Your order will be shipped soon!</h3>
           </Text>
-          <Link className="text-link" to="/">
+          <Link className="text-link" to={process.env.PUBLIC_URL + '/'}>
             <Button type="button">Continue Shopping</Button>
           </Link>
         </Message>

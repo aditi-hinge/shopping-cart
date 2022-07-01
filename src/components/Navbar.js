@@ -34,7 +34,7 @@ function Navbar({ cart }) {
           </SearchContainer>
         </Left>
         <Center>
-          <Link className="text-link" to="/">
+          <Link className="text-link" to={process.env.PUBLIC_URL + '/'}>
             <Logo>AUDERY.</Logo>
           </Link>
         </Center>

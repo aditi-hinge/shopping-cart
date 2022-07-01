@@ -23,7 +23,7 @@ export default function Login() {
             <Input placeholder="Password" type="password" />
           </InputContainer>
           <InputContainer>
-            <Link className="text-link" to="/">
+            <Link className="text-link" to={process.env.PUBLIC_URL + '/'}>
               <Button onClick={welcome}>LOG IN</Button>
             </Link>
           </InputContainer>
@@ -32,7 +32,7 @@ export default function Login() {
             <Links href="#0">Create new account</Links>
           </LinkContainer>
         </Form>
-        <Link className="text-link" to="/">
+        <Link className="text-link" to={process.env.PUBLIC_URL + '/'}>
           <CloseContainer>
             <Close />
           </CloseContainer>
