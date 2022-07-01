@@ -47,7 +47,7 @@ export default function Register() {
             <b>Read Agreement Policy</b>
           </MobileAgreement>
         </Form>
-        <Link className="text-link" to="/">
+        <Link className="text-link" to="/shopping-cart">
           <CloseContainer>
             <Close />
           </CloseContainer>
