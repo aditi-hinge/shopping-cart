@@ -10,9 +10,6 @@ import React from "react";
 
 import { connect } from "react-redux";
 
-// import history from "./helpers/history";
-// import { useRouterHistory } from "react-router"
-
 function RouteSwitch({ current }) {
   return (
     <BrowserRouter>
